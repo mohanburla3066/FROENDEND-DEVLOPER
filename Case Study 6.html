@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Membership Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Gym Membership Registration</h2>
+    <form action="submit_membership.php" method="post">
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="membership">Membership Type</label>
+      <select id="membership" name="membership" required>
+        <option value="" disabled selected>Select membership</option>
+        <option value="Monthly">Monthly - $50</option>
+        <option value="Quarterly">Quarterly - $135</option>
+        <option value="Yearly">Yearly - $500</option>
+      </select>
+
+      <label for="goals">Fitness Goals</label>
+      <textarea id="goals" name="goals" rows="4" placeholder="E.g., Lose weight, Build muscle, Improve endurance..." required></textarea>
+
+      <label>
+        <input type="checkbox" name="agree" required>
+        I agree to the terms and conditions
+      </label>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>

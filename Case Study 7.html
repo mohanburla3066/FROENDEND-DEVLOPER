@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 15px;
+      background: #fff8f0;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #d2691e;
+    }
+    .recipe-image {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .section {
+      margin-top: 20px;
+    }
+    .ingredients ul {
+      list-style: square inside;
+      padding-left: 0;
+    }
+    .instructions ol {
+      padding-left: 20px;
+    }
+    button {
+      background-color: #d2691e;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #b25311;
+    }
+    .notes {
+      margin-top: 20px;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Classic Chocolate Chip Cookies</h1>
+  <img src="https://images.unsplash.com/photo-1590080877777-2a01eb2d89e6?auto=format&fit=crop&w=700&q=80" alt="Chocolate Chip Cookies" class="recipe-image" />
+
+  <div class="section ingredients">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>1 cup unsalted butter, softened</li>
+      <li>1 cup white sugar</li>
+      <li>1 cup packed brown sugar</li>
+      <li>2 eggs</li>
+      <li>2 tsp vanilla extract</li>
+      <li>3 cups all-purpose flour</li>
+      <li>1 tsp baking soda</li>
+      <li>2 tsp hot water</li>
+      <li>0.5 tsp salt</li>
+      <li>2 cups semisweet chocolate chips</li>
+      <li>1 cup chopped walnuts (optional)</li>
+    </ul>
+  </div>
+
+  <div class="section instructions">
+    <h2>Instructions</h2>
+    <ol>
+      <li>Preheat oven to 350°F (175°C).</li>
+      <li>Cream together the butter, white sugar, and brown sugar until smooth.</li>
+      <li>Beat in the eggs one at a time, then stir in the vanilla.</li>
+      <li>Dissolve baking soda in hot water. Add to batter along with salt.</li>
+      <li>Stir in flour, chocolate chips, and nuts.</li>
+      <li>Drop by large spoonfuls onto ungreased pans.</li>
+      <li>Bake for about 10 minutes, or until edges are nicely browned.</li>
+    </ol>
+  </div>
+
+  <button onclick="showNotes()">Show Tips</button>
+  <p class="notes" id="notes" style="display:none;">
+    For softer cookies, bake for slightly less time. Store in an airtight container to keep fresh.
+  </p>
+
+  <script>
+    function showNotes() {
+      const notes = document.getElementById('notes');
+      if (notes.style.display === 'none') {
+        notes.style.display = 'block';
+      } else {
+        notes.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

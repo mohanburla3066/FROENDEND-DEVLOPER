@@ -1,0 +1,34 @@
+<html>
+<head>
+<title> online book order </title>
+</head>
+<body>
+<h1> ONLINE BOOK ORDER FORM</h1>
+<label for="name">Customer name:</label>
+<input type="name" id="name" required>
+<br><br>
+<label for="mobile">Mobile Number:</label>
+<input type="text" id="mobile" name="mobile" 
+pattern="[0-9]{10}" title="Enter a 10-digit mobile number" required>
+<br><br>
+<label for="category">category:</label>
+<select id="category" name="category" required>
+<option value="">---select category----</option>
+<option value="fiction">fiction</option>
+<option value="non fiction">non fiction</option>
+<option value="comics">comics</option>
+<option value="education">education</option>
+</select>
+<br><br>
+<label for="copies">Number of Copies:</label>
+<input type="number" id="copies" name="copies" min="1" required>
+<br><br>
+<label for="address">Address:</label><br>
+<textarea id="address" name="address" rows="4" cols="40" required></textarea>
+<br><br>
+<input type="submit" value="Place Order">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
+
